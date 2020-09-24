@@ -28,7 +28,8 @@ from awscli.customizations.cloudformation.artifact_exporter \
     AppSyncFunctionConfigurationRequestTemplateResource, \
     AppSyncFunctionConfigurationResponseTemplateResource, \
     GlueJobCommandScriptLocationResource, \
-    StepFunctionsStateMachineDefinitionResource
+    StepFunctionsStateMachineDefinitionResource, \
+    CodeCommitRepositoryS3Resource
 
 
 def test_is_s3_url():
@@ -156,6 +157,16 @@ def test_all_resources_export():
             "class": StepFunctionsStateMachineDefinitionResource,
             "expected_result": {
                 "Bucket": "foo", "Key": "bar", "Version": "baz"
+            }
+        },
+        {
+            "class": CodeCommitRepositoryS3Resource,
+            "expected_result": {
+                "S3": {
+                    "Bucket": "foo",
+                    "Key": "bar", 
+                    "ObjectVersion": "baz"
+                }
             }
         },
     ]

@@ -496,6 +496,18 @@ class GlueJobCommandScriptLocationResource(Resource):
     # Note the PROPERTY_NAME includes a '.' implying it's nested.
     PROPERTY_NAME = "Command.ScriptLocation"
 
+class CodeCommitRepositoryS3Resource(ResourceWithS3UrlDict):
+    """
+    Represents CodeCommit::Repository resource.
+    """
+    RESOURCE_TYPE = "AWS::CodeCommit::Repository"
+    PROPERTY_NAME = "Code.S3"
+    BUCKET_NAME_PROPERTY = "Bucket"
+    OBJECT_KEY_PROPERTY = "Key"
+    VERSION_PROPERTY = "ObjectVersion"
+    # Don't package the directory if S3 is omitted.
+    PACKAGE_NULL_PROPERTY = False
+    FORCE_ZIP = True
 
 RESOURCES_EXPORT_LIST = [
     ServerlessFunctionResource,
@@ -513,7 +525,8 @@ RESOURCES_EXPORT_LIST = [
     ServerlessLayerVersionResource,
     LambdaLayerVersionResource,
     GlueJobCommandScriptLocationResource,
-    StepFunctionsStateMachineDefinitionResource
+    StepFunctionsStateMachineDefinitionResource,
+    CodeCommitRepositoryS3Resource
 ]
 
 METADATA_EXPORT_LIST = [
