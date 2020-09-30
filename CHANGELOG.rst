@@ -2,6 +2,55 @@
 CHANGELOG
 =========
 
+1.18.149
+========
+
+* api-change:``schemas``: Update schemas command to latest version
+* api-change:``timestream-query``: Update timestream-query command to latest version
+* api-change:``ssm``: Update ssm command to latest version
+* api-change:``timestream-write``: Update timestream-write command to latest version
+* api-change:``ec2``: Update ec2 command to latest version
+* api-change:``connect``: Update connect command to latest version
+
+
+1.18.148
+========
+
+* api-change:``application-autoscaling``: Update application-autoscaling command to latest version
+* api-change:``rds``: Update rds command to latest version
+
+
+1.18.147
+========
+
+* api-change:``ec2``: Update ec2 command to latest version
+* api-change:``frauddetector``: Update frauddetector command to latest version
+* api-change:``config``: Update config command to latest version
+* api-change:``docdb``: Update docdb command to latest version
+* api-change:``sts``: Update sts command to latest version
+* api-change:``batch``: Update batch command to latest version
+
+
+1.18.146
+========
+
+* api-change:``eks``: Update eks command to latest version
+* api-change:``textract``: Update textract command to latest version
+* api-change:``synthetics``: Update synthetics command to latest version
+* api-change:``amplify``: Update amplify command to latest version
+* api-change:``savingsplans``: Update savingsplans command to latest version
+* api-change:``transcribe``: Update transcribe command to latest version
+
+
+1.18.145
+========
+
+* api-change:``quicksight``: Update quicksight command to latest version
+* api-change:``backup``: Update backup command to latest version
+* api-change:``ce``: Update ce command to latest version
+* api-change:``translate``: Update translate command to latest version
+
+
 1.18.144
 ========
 
